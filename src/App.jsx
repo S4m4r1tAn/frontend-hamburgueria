@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { MenuContainer } from "./components/MenuContainer";
 import "./App.css";
-import cover from "./assets/images/cover.jpeg";
 
 const App = () => {
   const [products, setProducts] = useState([
@@ -54,7 +53,7 @@ const App = () => {
   };
 
   return (
-    <body>
+    <>
       <div className="cover"></div>
       <div className="search">
         <input
@@ -67,15 +66,18 @@ const App = () => {
         />
         <button onClick={() => showProducts(userInput)}>Procurar</button>
       </div>
-      <span className={cartTotal.toFixed(2) > 0 ? "total" : "empty"}>
+      <div className={cartTotal.toFixed(2) > 0 ? "total" : "empty"}>
         Total: R$ {cartTotal.toFixed(2)}
+      </div>
+      <span className={cartTotal.toFixed(2) > 0 ? "seeCart" : "empty"}>
+        Ver carrinho
       </span>
       <MenuContainer
         products={filteredProducts.length > 0 ? filteredProducts : products}
         handleClick={handleClick}
       />
       {/* <p>Totalzinho: R$ {cartTotal.toFixed(2)}</p> */}
-      mostrando itens no carrinho: <br />
+      Itens no carrinho: <br />
       {currentSale.map((product, index) => {
         return (
           <p key={index}>
@@ -83,7 +85,7 @@ const App = () => {
           </p>
         );
       })}
-    </body>
+    </>
   );
 };
 

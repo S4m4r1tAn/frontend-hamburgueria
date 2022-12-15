@@ -5,8 +5,8 @@ export const Product = ({ product, handleClick }) => {
     <>
       <ul className="eachProduct">
         <li>{product.name}</li>
-        <li>{product.category}</li>
-        <li>{product.price}</li>
+        <li>Categoria: {product.category}</li>
+        <li>Preço: {product.price}</li>
         <button onClick={() => handleClick(product.id)}>
           Adicionar ao carrinho
         </button>

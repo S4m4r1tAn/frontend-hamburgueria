@@ -41,6 +41,7 @@ body {
   background-color: yellow;
   width: 20%;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .total {
@@ -57,6 +58,21 @@ body {
 
 .empty {
   display: none;
+}
+
+.seeCart {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #fff;
+  color: blueviolet;
+  border: 1px solid blueviolet;
+  border-radius: 5px;
+  padding: 10px;
+  position: fixed;
+  right: 10px;
+  bottom: calc(10% + 10px);
+  font-weight: bolder;
+  cursor: pointer;
 }
 
 .eachProduct {
@@ -81,6 +97,7 @@ body {
 .eachProduct button {
   padding: 10px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .productsShowCase {
